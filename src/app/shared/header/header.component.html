@@ -4,8 +4,12 @@
     </div>
     <nav>
         <ul>
-            <li><button *ngIf="!isLoggedIn" type="button" class="button">Login</button></li>
-            <li><button *ngIf="isLoggedIn" type="button" class="button" (click)="logout()">Logout</button></li>
+            <li *ngIf="!isLoggedIn">
+                <button type="button">Login</button>
+            </li>
+            <li *ngIf="isLoggedIn">
+                <button type="button" (click)="logout()">Logout</button>
+            </li>
         </ul>
     </nav>
 </header>
