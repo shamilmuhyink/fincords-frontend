@@ -1,1 +1,32 @@
-<app-header></app-header>
+<app-sidenav></app-sidenav>
+
+<div class="transaction-table">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <input type="checkbox">
+                    Invoice
+                </th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of filteredOrders">
+                <td>
+                    <div class="invoice-cell">
+                        <input type="checkbox">
+                        <span>{{ order.invoice }}</span>
+                    </div>
+                </td>
+                <td>
+                    <span class="status-badge" [class]="order.status.toLowerCase()">
+                        {{ order.status }}
+                    </span>
+                </td>
+                <td>{{ order.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

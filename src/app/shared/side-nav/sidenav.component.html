@@ -1,0 +1,15 @@
+<nav class="sidenav" [ngClass]="{ 'collapsed': isCollapsed }">
+    <!-- Hamburger moved to be first element inside nav -->
+    <div class="hamburger" (click)="toggleCollapse()">
+        &#9776;
+    </div>
+
+    <div class="nav-links">
+        <!-- <a *ngFor="let item of navItems"
+         [routerLink]="item.link"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact: true}">
+        {{ item.label }}
+      </a> -->
+    </div>
+</nav>

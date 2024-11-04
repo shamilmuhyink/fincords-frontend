@@ -1,0 +1,52 @@
+.transaction-table {
+    margin-left: 250px;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            font-weight: 500;
+            color: #6b7280;
+        }
+    }
+}
+
+.invoice-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &.paid {
+        background-color: #d1fae5;
+        color: #065f46;
+    }
+
+    &.refunded {
+        background-color: #fef3c7;
+        color: #92400e;
+    }
+
+    &.cancelled {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+}
